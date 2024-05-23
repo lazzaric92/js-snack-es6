@@ -3,10 +3,13 @@ Dwayne Johnson ci ha chiesto di creare i segnaposto per il tavolo degli invitati
 Ci ha lasciato il nome del tavolo ("Tavolo Vip") e la lista degli invitati in ordine di posto:
 [ 'Brad Pitt', 'Johnny Depp', 'Lady Gaga', 'Cristiano Ronaldo', 'Georgina Rodriguez', 'Chiara Ferragni',  'George Clooney', 'Amal Clooney', 'Fedez', 'Amadeus', 'Fiorello']
 Ma  la tipografia per stampare il tutto vuole che le mandiamo una lista di ospiti in un formato specifico, per cui dobbiamo fare in modo che ogni ospite sia un oggetto letterale javascript che ha come proprietà:
-nome del tavolo (tableName),
-nome dell'ospite (guestName),
-posto occupato (place),
+- nome del tavolo (tableName),
+- nome dell'ospite (guestName),
+- posto occupato (place),
 Generiamo e stampiamo in console la lista per i segnaposto.
+
+// Creo l'array guests con gli oggetti letterali con le proprietà richieste.
+    Stampo la lista degli invitati con il forEach.
 
 
 ! SNACK 2
@@ -23,3 +26,8 @@ Id  Name                Grades
 196 Luigi Grimaldello       68
 102 Piero della Francesca   50
 120 Francesca da Polenta    84
+
+// Creo l'array students con gli oggetti letterali con le proprietà riportate.
+    Mappo l'array per crearne un altro (1) con solo i nomi in maiuscolo.
+    Filtro l'array per crearne un altro (2) con gli sudenti con il totale di voti > 70.
+    Filtro l'array (2) per crearne un altro (3) con gli studenti con id > 120.
