@@ -61,3 +61,7 @@ const guests = [
         place: 11
     }
 ]
+
+guests.forEach(element => {
+    console.log(`${element.tableName} - Place ${element.place}: ${element.guestName}`);
+});
