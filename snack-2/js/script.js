@@ -1,4 +1,5 @@
-//todo: Abbiamo un elenco degli studenti di una facoltà, identificati da id, Nome e somma totale dei loro voti di esame... Per preparare l'aula di un nuovo corso, dobbiamo stampare le targhe col nome degli studenti: creare una lista contenente il loro nome tutto in maiuscolo, ad esempio (Marco della Rovere => MARCO DELLA ROVERE); 
+//todo: Abbiamo un elenco degli studenti di una facoltà, identificati da id, Nome e somma totale dei loro voti di esame... 
+//todo: Per preparare l'aula di un nuovo corso, dobbiamo stampare le targhe col nome degli studenti: creare una lista contenente il loro nome tutto in maiuscolo, ad esempio (Marco della Rovere => MARCO DELLA ROVERE); 
 //todo: Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70.
 //todo: Dobbiamo creare una lista di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120.
 
@@ -50,3 +51,18 @@ const students = [
         grades: 84
     }
 ]
+
+const newCourse = students.map((student) => student.name.toUpperCase());
+console.log(newCourse);
+
+const higherGradesStudents = students.filter((student) => student.grades > 70);
+console.log(higherGradesStudents);
+higherGradesStudents.forEach(element => {
+    console.log(`Student Id: ${element.id} - ${element.name}, grades: ${element.grades}`);
+});
+
+const filteredStudentsList = higherGradesStudents.filter((student) => student.id > 120);
+console.log(filteredStudentsList);
+filteredStudentsList.forEach(element => {
+    console.log(`Student Id: ${element.id} - ${element.name}, grades: ${element.grades}`);
+});
