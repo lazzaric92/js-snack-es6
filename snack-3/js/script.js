@@ -31,6 +31,42 @@ const bikes = [
     }
 ]
 
+const clonedBikesArray = [...bikes];
+clonedBikesArray.forEach(() => {
+    if (clonedBikesArray.length > 1){
+        let index = 0;
+        while (index < clonedBikesArray.length) {
+            if(clonedBikesArray[0].weight < clonedBikesArray[1].weight){
+                clonedBikesArray.splice(1, 1);
+            } else {
+                clonedBikesArray.splice(0, 1);
+            }
+            index++;
+        }
+
+        if(clonedBikesArray[0].weight < clonedBikesArray[1].weight){
+            clonedBikesArray.splice(1, 1);
+        } else {
+            clonedBikesArray.splice(0, 1);
+        }
+    } else {
+        return clonedBikesArray[0];
+    } 
+});
+
+
+console.log(clonedBikesArray);
+
+const lighterBike = clonedBikesArray[0];
+console.log(lighterBike);
+
+const {name, weight} = lighterBike;
+console.log(`The ${name} bike\'s weight is ${weight} kg, so it's the lighter one.`);
+
+
+
+
+
 function getLowestNumber(arguments){
     if(arguments.length > 1){
         let index = 0;
@@ -53,7 +89,3 @@ function getLowestNumber(arguments){
         return arguments[0];
     } 
 }
-
-const bikesWeight = bikes.map((element) => element.weight);
-getLowestNumber(bikesWeight);
-console.log(bikesWeight);
