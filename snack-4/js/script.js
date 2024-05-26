@@ -53,10 +53,20 @@ const footballTeams = [
     }
 ]
 
+let newTeamsArray = [];
+footballTeams.forEach(team => {
+    team.points = getRandomIntNumber(0, 100);
+    team.foulsReceived = getRandomIntNumber(0, 100);
+    const {teamName, foulsReceived} = team;
+    newTeamsArray.push({teamName, foulsReceived});
+});
 
 
+console.log(footballTeams);
+console.log(newTeamsArray);
 
 
 function getRandomIntNumber(min, max){
     return Math.floor((Math.random() * (max - min) + 1) + min);
 }
+
