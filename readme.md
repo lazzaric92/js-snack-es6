@@ -54,6 +54,7 @@ Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengo
     Riassegno le proprietà pari a 0 invocando la funzione
     Creo il nuovo array con la destrutturazione
 
+
 ! BONUS 1: SNACK 5
 Abbiamo questa lista di articoli di moda:
 
@@ -66,5 +67,7 @@ Jenny       borsa     pink
 Questi articoli sono inseriti in un array di oggetti.
 Dobbiamo attaccare a ognuno un cartellino position con una lettera dell'alfabeto generata casualmente e inserire gli oggetti così modificati in un nuovo array di oggetti.
 
+// Creo l'array di oggetti
+    Con la destrutturazione creo i nuovi oggetti (con la proprietà position) da inserire nel nuovo array
 BONUS 2
 Stampare in pagina oltre che in console!
