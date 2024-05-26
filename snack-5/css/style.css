@@ -29,7 +29,8 @@ article.card {
     border-radius: 8px;
 }
 
-article p {
+article p,
+article h2 {
     text-transform: uppercase;
-    padding: .8rem;
+    padding: .6rem;
 }
