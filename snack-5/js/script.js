@@ -34,3 +34,14 @@ const articlesList = [
 
 console.log(articlesList);
 
+
+function getRandomLetter(){
+    let string = 'aquickbrownfoxjumpsoverlazydog';
+    let lettersArray = string.split('');
+    const randomLetterIndex = getRandomIntNumber(0, lettersArray.length -1);
+    return lettersArray[randomLetterIndex];
+}
+
+function getRandomIntNumber(min, max){
+    return Math.floor((Math.random() * (max - min) + 1) + min);
+}
