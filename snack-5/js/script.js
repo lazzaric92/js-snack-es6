@@ -47,7 +47,9 @@ articlesList.forEach(article => {
     newArticlesList.push({position, name, type, color});
 });
 
+newArticlesList.sort(sortOn('position'));
 console.log(newArticlesList);
+
 
 newArticlesList.forEach(item => {
     const {name, type, color} = item;
@@ -69,7 +71,7 @@ newArticlesList.forEach(item => {
 
 
 // || FUNCTIONS
-
+// --> function to get a random letter
 function getRandomLetter(){
     let string = 'aquickbrownfoxjumpsoverlazydog';
     let lettersArray = string.split('');
@@ -77,9 +79,26 @@ function getRandomLetter(){
     return lettersArray[randomLetterIndex];
 }
 
+// --> function to get a random number
 function getRandomIntNumber(min, max){
     return Math.floor((Math.random() * (max - min) + 1) + min);
 }
+
+// --> function to sort objc in alphabetical order
+function sortOn(key){
+    return function(a,b) {
+        const textA = a[key].toUpperCase();
+        const textB = b[key].toUpperCase();
+        if (textA < textB) {
+            return -1;
+        } else if (textA > textB){
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}
+
 
 
 // || MEMO
