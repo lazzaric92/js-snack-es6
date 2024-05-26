@@ -33,6 +33,15 @@ const articlesList = [
 ]
 
 console.log(articlesList);
+const newArticlesList = [];
+
+articlesList.forEach(article => {
+    let letter = getRandomLetter();
+    const {name, type, color, position = letter} = article;
+    newArticlesList.push({name, type, color, position});
+});
+
+console.log(newArticlesList);
 
 
 function getRandomLetter(){
